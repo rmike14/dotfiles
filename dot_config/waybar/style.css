@@ -1,0 +1,156 @@
+/* ============================================
+   Waybar — AMOLED Void
+   Minimalist. Pure black. No compromise.
+   ============================================ */
+
+@import "colors.css";
+
+* {
+    font-family: "JetBrains Mono", "Fira Code", "Monospace";
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* ── Bar ───────────────────────────────────── */
+window#waybar {
+    background: @base;
+    color: @text-muted;
+    border-bottom: 1px solid @border;
+}
+
+/* ── Shared module base ────────────────────── */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+#workspaces,
+#window,
+#tray,
+#pulseaudio,
+#battery,
+#clock,
+#custom-power {
+    padding: 0 5px;
+    background: transparent;
+    color: @text-dim;
+    transition: color 0.15s ease;
+}
+
+/* ── Workspaces ────────────────────────────── */
+#workspaces button {
+    padding: 0 6px;
+    background: transparent;
+    color: @text-ghost;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: @accent-hover;
+    border-bottom: 2px solid @text-void;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    color: @text-bright;
+    border-bottom: 2px solid @text-bright;
+    font-weight: 500;
+}
+
+#workspaces button.urgent {
+    color: @accent-danger;
+    border-bottom: 2px solid @accent-danger;
+}
+
+/* ── Window title ──────────────────────────── */
+#window {
+    color: @text-faint;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* ── Clock ─────────────────────────────────── */
+#clock {
+    color: @text-normal;
+}
+
+#clock:hover {
+    color: @text-bright;
+}
+
+/* ── Battery ───────────────────────────────── */
+#battery {
+    color: @text-dim;
+}
+
+#battery.charging {
+    color: @accent-hover;
+}
+
+#battery.plugged {
+    color: @accent-hover;
+}
+
+#battery.warning:not(.charging) {
+    color: @accent-warning;
+}
+
+#battery.critical:not(.charging) {
+    color: @accent-danger;
+}
+
+/* ── Pulseaudio ─────────────────────────────── */
+#pulseaudio {
+    color: @text-dim;
+}
+
+#pulseaudio:hover {
+    color: @accent-hover;
+}
+
+#pulseaudio.muted {
+    color: @text-void;
+}
+
+/* ── Tray ───────────────────────────────────── */
+#tray {
+    padding: 0 6px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @accent-warning;
+}
+
+/* ── Power button ───────────────────────────── */
+#custom-power {
+    color: @text-ghost;
+    padding: 0 12px;
+    font-size: 14px;
+    transition: color 0.15s ease;
+}
+
+#custom-power:hover {
+    color: @accent-danger;
+}
+
+/* ── Tooltip ────────────────────────────────── */
+tooltip {
+    background: @surface;
+    border: 1px solid @border-sub;
+    color: @accent-hover;
+}
+
+tooltip label {
+    color: @accent-hover;
+}

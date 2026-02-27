@@ -1,0 +1,171 @@
+/* ============================================
+   Rofi — AMOLED Void
+   Minimalist. Pure black. No compromise.
+   ============================================
+   Place in ~/.config/rofi/
+   Use with: rofi -show drun -theme amoled-void
+   Or set in ~/.config/rofi/config.rasi:
+     @theme "~/.config/rofi/amoled-void.rasi"
+   ============================================ */
+
+* {
+    /* ── Palette ─────────────────────────────── */
+    base:          #000000;
+    surface:       #0a0a0a;
+    border-col:    #111111;
+    border-sub:    #1a1a1a;
+
+    text-bright:   #ffffff;
+    text-normal:   #dddddd;
+    text-muted:    #c8c8c8;
+    text-dim:      #888888;
+    text-faint:    #555555;
+    text-ghost:    #444444;
+    text-void:     #333333;
+
+    accent-hover:   #aaaaaa;
+    accent-warning: #e0a050;
+    accent-danger:  #ff4444;
+
+    /* ── Rofi internals ──────────────────────── */
+    background-color:  transparent;
+    text-color:        @text-muted;
+    font:              "JetBrainsMono Nerd Font 13";
+    border-color:      @border-col;
+    separatorcolor:    @border-col;
+}
+
+/* ── Window ─────────────────────────────────── */
+window {
+    background-color: @base;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    0px;
+    width:            480px;
+    padding:          0;
+}
+
+/* ── Main box ───────────────────────────────── */
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, listview ];
+    spacing:          0px;
+    padding:          0px;
+    dynamic:	      true;
+}
+
+/* ── Input bar ──────────────────────────────── */
+inputbar {
+    background-color: @surface;
+    border:           0px 0px 1px 0px;
+    border-color:     @border-col;
+    padding:          10px 14px;
+    spacing:          8px;
+    children:         [ entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @text-ghost;
+    font:             "JetBrainsMono Nerd Font 13";
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @text-normal;
+    placeholder-color: @text-ghost;
+}
+
+/* ── List ───────────────────────────────────── */
+listview {
+    background-color: transparent;
+    padding:          6px 0px;
+    spacing:          0px;
+    lines:            8;
+    dynamic:          true;
+    fixed-height:     false;
+    scrollbar:        false;
+    border:           0px;
+    border-color:     @base;
+    }
+
+scrollbar {
+    enabled:          false;
+    width:	      0px;
+    }
+/* ── Rows ───────────────────────────────────── */
+element {
+    background-color: transparent;
+    text-color:       @text-dim;
+    padding:          8px 14px;
+    spacing:          10px;
+    border-radius:    0px;
+    orientation:      horizontal;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @text-dim;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @accent-danger;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @accent-hover;
+}
+
+element selected.normal {
+    background-color: @surface;
+    text-color:       @text-bright;
+    border:           0px 0px 0px 2px;
+    border-color:     @text-bright;
+}
+
+element selected.urgent {
+    background-color: transparent;
+    text-color:       @accent-danger;
+    border:           0px 0px 0px 2px;
+    border-color:     @accent-danger;
+}
+
+element selected.active {
+    background-color: transparent;
+    text-color:       @accent-hover;
+    border:           0px 0px 0px 2px;
+    border-color:     @accent-hover;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             20px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+/* ── Message / error ────────────────────────── */
+message {
+    background-color: @surface;
+    border:           1px 0px 0px 0px;
+    border-color:     @border-col;
+    padding:          8px 14px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @accent-warning;
+}
+
+/* ── No results ─────────────────────────────── */
+error-message {
+    background-color: @base;
+    text-color:       @accent-danger;
+    padding:          14px;
+}

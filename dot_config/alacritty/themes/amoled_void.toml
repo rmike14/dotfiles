@@ -1,0 +1,70 @@
+# ============================================
+# Alacritty — AMOLED Void
+# Minimalist. Pure black. No compromise.
+# ============================================
+# Place in ~/.config/alacritty/
+# Import in alacritty.toml with:
+#   import = ["~/.config/alacritty/amoled-void.toml"]
+
+[colors.primary]
+background = "#000000"
+foreground = "#c8c8c8"
+dim_foreground = "#555555"
+
+[colors.cursor]
+text   = "#000000"
+cursor = "#ffffff"
+
+[colors.vi_mode_cursor]
+text   = "#000000"
+cursor = "#aaaaaa"
+
+[colors.search.matches]
+foreground = "#000000"
+background = "#aaaaaa"
+
+[colors.search.focused_match]
+foreground = "#000000"
+background = "#ffffff"
+
+[colors.hints.start]
+foreground = "#000000"
+background = "#e0a050"
+
+[colors.hints.end]
+foreground = "#000000"
+background = "#555555"
+
+[colors.selection]
+text       = "#000000"
+background = "#333333"
+
+[colors.normal]
+black   = "#000000"
+red     = "#ff4444"
+green   = "#7ec99a"
+yellow  = "#e0a050"
+blue    = "#6699cc"
+magenta = "#b294bb"
+cyan    = "#66cccc"
+white   = "#c8c8c8"
+
+[colors.bright]
+black   = "#333333"
+red     = "#ff6e6e"
+green   = "#a3d9b8"
+yellow  = "#f0bc80"
+blue    = "#88b4d8"
+magenta = "#caaece"
+cyan    = "#88dddd"
+white   = "#ffffff"
+
+[colors.dim]
+black   = "#0a0a0a"
+red     = "#882222"
+green   = "#4a7a5e"
+yellow  = "#8a6030"
+blue    = "#3d5f80"
+magenta = "#6a5470"
+cyan    = "#3a7a7a"
+white   = "#444444"

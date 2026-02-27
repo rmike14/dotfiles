@@ -1,0 +1,20 @@
+/* ============================================
+   Waybar — AMOLED Void : Color Palette
+   ============================================ */
+
+@define-color base        #000000;
+@define-color surface     #0a0a0a;
+@define-color border      #111111;
+@define-color border-sub  #1a1a1a;
+
+@define-color text-bright #ffffff;
+@define-color text-normal #dddddd;
+@define-color text-muted  #c8c8c8;
+@define-color text-dim    #888888;
+@define-color text-faint  #555555;
+@define-color text-ghost  #444444;
+@define-color text-void   #333333;
+
+@define-color accent-hover   #aaaaaa;
+@define-color accent-warning #e0a050;
+@define-color accent-danger  #ff4444;
