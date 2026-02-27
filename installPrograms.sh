@@ -63,6 +63,20 @@ PACMAN_PKGS=(
   rofi                   # Application launcher / window switcher
   hyprlock               # Screen locker for Hyprland
   hypridle               # Idle daemon for Hyprland
+  alacritty
+  brightnessctl
+  fastfetch
+  hyprpolkitagent
+  pavucontrol
+  papirus-icon-theme
+  otf-atkinson-hyperlegible
+  sddm
+  thunar
+  ttf-jetbrains-mono
+  ttf-jetbrains-mono-nerd
+  ufw
+  wl-clipboard
+  xdg-user-dirs
 )
 
 log "Installing packages from official repos..."
@@ -72,10 +86,7 @@ sudo pacman -S --needed --noconfirm "${PACMAN_PKGS[@]}"
 # Packages from AUR
 # -------------------------------------------------------------
 AUR_PKGS=(
-  # Add AUR packages here, for example:
-  # zen-browser-bin
-  # vesktop-bin
-  # hyprshot
+  hyprshot
 )
 
 if [ ${#AUR_PKGS[@]} -gt 0 ]; then
