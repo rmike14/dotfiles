@@ -78,6 +78,7 @@ PACMAN_PKGS=(
   wl-clipboard
   xdg-user-dirs
   mako
+  yazi
 )
 
 log "Installing packages from official repos..."
