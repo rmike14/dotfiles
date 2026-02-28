@@ -1,0 +1,61 @@
+# ============================================
+# Mako — AMOLED Void
+# Minimalist. Pure black. No compromise.
+# Place at: ~/.config/mako/config
+# Reload with: makoctl reload
+# ============================================
+
+# ── Layout ────────────────────────────────────
+anchor=top-right
+margin=12
+padding=12,16
+width=320
+height=150
+max-visible=5
+sort=-time
+
+# ── Appearance ────────────────────────────────
+background-color=#0a0a0a
+text-color=#c8c8c8
+border-color=#111111
+border-size=1
+border-radius=0
+
+# ── Typography ────────────────────────────────
+font=JetBrains Mono 9
+
+# ── Behaviour ─────────────────────────────────
+default-timeout=5000
+ignore-timeout=0
+
+# ── Format ────────────────────────────────────
+format=<b>%s</b>\n%b
+
+# ── Urgency: low ──────────────────────────────
+[urgency=low]
+background-color=#0a0a0a
+text-color=#555555
+border-color=#111111
+default-timeout=3000
+
+# ── Urgency: normal ───────────────────────────
+[urgency=normal]
+background-color=#0a0a0a
+text-color=#c8c8c8
+border-color=#111111
+default-timeout=5000
+
+# ── Urgency: critical ─────────────────────────
+[urgency=critical]
+background-color=#0a0a0a
+text-color=#ff4444
+border-color=#ff4444
+default-timeout=0
+
+# ── Grouped notifications ─────────────────────
+[grouped]
+format=(%g) <b>%s</b>\n%b
+border-color=#1a1a1a
+
+[group-index=0]
+border-color=#222222

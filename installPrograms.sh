@@ -77,6 +77,7 @@ PACMAN_PKGS=(
   ufw
   wl-clipboard
   xdg-user-dirs
+  mako
 )
 
 log "Installing packages from official repos..."
